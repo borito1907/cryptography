@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\usepackage{parskip}
+\newgeometry{vmargin={15mm}, hmargin={24mm,34mm}}
+\theoremstyle{definition} 
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\xtoc}{\lvert x \rvert ^{c}}
+\newcommand{\bitstring}[1]{\{0,1\}^{#1}}
+\newcommand{\Gen}{\textbf{Gen}}
+\newcommand{\Sample}{\textbf{Sample}}
+\newcommand{\Eval}{\textbf{Eval}}
+\newcommand{\Invert}{\textbf{Invert}}
+
+\DeclareMathOperator*{\E}{\mathbb{E}}
+
+\title{Cryptography}
+\date{March 2024}
+\author{Boran Erol}
+
+\begin{document}
+
+\maketitle
+
+The Goldreich-Levin Theorem proves existence of probabilistic learning algorithms
+for linear functions.
+
+
+
+\newpage
+
+\section{Presentation in Katz and Lindell}
+
+
+
+\begin{theorem}
+    Assume OWFs exist. Then, there's a one-way function $g$ and a hard-core predicate
+    $hc$ of $g$.
+\end{theorem}
+
+7.3.2 in Katz and Lindell
+
+Notes about Claim 7.15 in Katz and Lindell
+
+For $x \in S_{n}$, we're being careful with the size of the set and relaxing the success probability.
+For $x \notin S_{n}$, we're being careful with the success probability and relaxing the set size.
+
+Notes about Claim 7.16 in Katz and Lindell
+
+Union bound the failure probabilities for $r$ and $r \oplus e_{i}$.
+
+Finish the proof by using the Chernoff bound.
+
+\end{document}
+
+
